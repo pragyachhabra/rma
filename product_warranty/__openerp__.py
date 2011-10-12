@@ -26,7 +26,7 @@
     'version': '1.0',
     'category': 'Generic Modules/Product',
     'description': """
-Extend the product warranty management with warranty details on prodcut / supplier relation
+Extend the product warranty management with warranty details on product / supplier relation
     """,
     'author': 'Akretion',
     'website': 'http://www.akretion.com',
