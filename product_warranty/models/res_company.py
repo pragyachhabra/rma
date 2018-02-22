@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # © 2016 Joel Grand-Guillaume, Cyril Gaudin (Camptocamp)
 # © 2009-2013 Akretion, Emmanuel Samyn, Raphaël Valyi, Sébastien Beau
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).

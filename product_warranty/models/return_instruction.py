@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # © 2016 Cyril Gaudin (Camptocamp)
 # © 2015 Vauxoo
 # © 2009-2011  Akretion, Emmanuel Samyn, Benoît Guillot

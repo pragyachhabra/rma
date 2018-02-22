@@ -34,6 +34,7 @@ Contributors
 * Yanina Aular <yanina.aular@vauxoo.com>
 * Cyril Gaudin <cyril.gaudin@camptocamp.com>
 * Bima Jati Wijaya <bimajatiwijaya@gmail.com>
+* Pragya Chhabra<pragya.chhabra@linserv.se>
 
 Maintainer
 ----------
