@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
     <data>
-       <!-- return instructions tree view -->
+        <!-- return instructions tree view -->
         <record model="ir.ui.view" id="product_return_instructions_tree_view">
             <field name="name">product.return.instructions.tree</field>
             <field name="model">return.instruction</field>
@@ -39,15 +39,15 @@
         </record>
 
         <menuitem action="product_return_instructions_action"
-            groups="base.group_no_one"
-            id="menu_product_return_instructions_action"
-            parent="sale.prod_config_main" sequence="3"/>
+                  groups="base.group_no_one"
+                  id="menu_product_return_instructions_action"
+                  parent="sale.prod_config_main" sequence="3"/>
 
         <!-- supplier info tree view -->
         <record model="ir.ui.view" id="product_supplierinfo_warranty_tree_view">
             <field name="name">product.supplierinfo.warranty.tree</field>
             <field name="model">product.supplierinfo</field>
-            <field name="inherit_id" ref="product.product_supplierinfo_tree_view" />
+            <field name="inherit_id" ref="product.product_supplierinfo_tree_view"/>
             <field name="arch" type="xml">
                 <field name="min_qty" position="before">
                     <field name="warranty_duration"/>
@@ -63,13 +63,27 @@
         <record model="ir.ui.view" id="product_supplierinfo_warranty_form_view">
             <field name="name">product.supplierinfo.warranty.form</field>
             <field name="model">product.supplierinfo</field>
-            <field name="inherit_id" ref="product.product_supplierinfo_form_view" />
+            <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
             <field name="arch" type="xml">
+
+
                 <xpath expr="//group[last()]" position="after">
                     <group name="waranty_group" string="Warranty informations" colspan="4">
-                        <field name="active_supplier"/>
-                        <field name="warranty_duration"/>
-                        <field name="return_instructions"/>
+                        <div class="o_horizontal_separator">Warranty informations</div>
+                        <div style="float:left;display:inline-flex;padding:0px 0px 10px 0px; width:100%;">
+                            <strong style="width: 186px;">Active Supplier</strong>
+                            <field name="active_supplier" style="display:inline"/>
+                        </div>
+                        <br/>
+                        <div style="float:left;display:inline-flex;padding:0px; width:100%;">
+                            <strong style="width: 186px;">Warranty Duration</strong>
+                            <field name="warranty_duration"/>
+                        </div>
+                        <div style="float:left;display:inline-flex;padding:0px; width:100%;">
+                            <strong style="width: 186px;">Instructions</strong>
+                            <field name="return_instructions"/>
+                        </div>
+
                         <group colspan="4">
                             <group>
                                 <field name="warranty_return_partner"/>
@@ -78,7 +92,9 @@
                                 <field name="warranty_return_other_address"
                                        attrs="{'invisible':[('warranty_return_partner', '!=', 'other')], 'required':[('warranty_return_partner', '=', 'other')]}"
                                        class="oe_inline"/>
-                                <field name="warranty_return_address" attrs="{'invisible':[('warranty_return_partner', '=', 'other')]}" class="oe_inline" />
+                                <field name="warranty_return_address"
+                                       attrs="{'invisible':[('warranty_return_partner', '=', 'other')]}"
+                                       class="oe_inline"/>
                             </group>
                         </group>
                     </group>
@@ -86,5 +102,5 @@
             </field>
         </record>
 
-     </data>
+    </data>
 </odoo>
